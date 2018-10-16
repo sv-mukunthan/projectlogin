@@ -1,0 +1,46 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src = "login.js" type="text/javascript"></script>
+    </head>
+    <body>
+      <h2 class="w3-text-blue">Registration form</h2>
+      <p>
+      <label class="w3-text-blue"><b>User Name</b></label>
+      <input class="w3-input w3-border" id="uname"  name="uname" type="Email"></p>
+      <div id="regname_error" class="color"></div>
+      <p>
+      <label class="w3-text-blue"><b>Password</b></label>
+      <input class="w3-input w3-border"  id="upass" name="pass" type="text"></p>
+      <div id="regpass_error" class="color"></div>
+      <p>
+      <button class="w3-btn w3-blue" id="regForm" onclick="validation()">Register</button></p>
+    </from>
+
+    <script type="text/javascript">
+      function validation(){
+      var user=document.getElementById("uname").value;
+      var pass=document.getElementById("upass").value;
+
+      if(user==""){
+        document.getElementById("regname_error").innerHTML="!!!please enter ur username";
+      }
+       else{
+        document.getElementById("regname_error").innerHTML="";
+      }
+      if(pass==""){
+        document.getElementById("regpass_error").innerHTML="!!!please enter ur password";
+      }
+      else{
+        document.getElementById("regpass_error").innerHTML="";
+      }
+    }
+    </script>
+    <style type="text/css">
+      .color{
+        color: red;
+      }
+    </style>
+    </body>
+    </html>
